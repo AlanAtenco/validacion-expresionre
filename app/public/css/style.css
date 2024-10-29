@@ -1,0 +1,106 @@
+/* Configuración general de la página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    background-size: cover;
+}
+
+/* Contenedor principal */
+.container {
+    background: #ffffff1a;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+/* Estilo para los inputs y botón */
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+input {
+    border: 1px solid #ddd;
+}
+
+input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.2);
+    outline: none;
+}
+
+/* Botón con gradiente y efectos */
+button {
+    background-color: #c900c9;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(75, 142, 233, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0a121d, #1609fd);
+    box-shadow: 0 12px 20px rgba(75, 142, 233, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Estilo para el área de resultados */
+.result {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.result.success {
+    color: #2ecc71;
+    animation: pulseSuccess 0.5s;
+}
+
+.result.error {
+    color: #e74c3c;
+    animation: shakeError 0.5s;
+}
+
+/* Animación de éxito */
+@keyframes pulseSuccess {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Animación de error */
+@keyframes shakeError {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
